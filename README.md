@@ -55,3 +55,5 @@ Los libros se almacenan en una lista de Python en memoria. No hay base de datos 
 
 ## Modificación realizada por Emilio Rodal (mailunt)
 Esto es una oración de prueba, saludos a JA y AA
+## MODIFICACION Fer y Adrian (CHEZ)
+Faltan 3 dias pa´ pistear
