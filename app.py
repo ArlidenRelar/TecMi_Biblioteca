@@ -1,46 +1,24 @@
-from flask import Flask, render_template, request, redirect, url_for
+#Modificación hecha por Mariana Yamile, Alexa del Carmen y Fedro Rojas
+
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
-# Datos de ejemplo en memoria. Se reinician al detener la aplicación.
-libros = [
-    {"id": 1, "titulo": "Cien años de soledad", "autor": "Gabriel García Márquez", "prestado": False},
-    {"id": 2, "titulo": "El principito", "autor": "Antoine de Saint-Exupéry", "prestado": True},
-    {"id": 3, "titulo": "Python para principiantes", "autor": "Equipo docente", "prestado": False},
+# Datos de ejemplo para tu biblioteca
+LIBROS = [
+    {"titulo": "Cien años de soledad", "autor": "Gabriel García Márquez", "disponible": True},
+    {"titulo": "Don Quijote de la Mancha", "autor": "Miguel de Cervantes", "disponible": False},
+    {"titulo": "El principito", "autor": "Antoine de Saint-Exupéry", "disponible": True}
 ]
 
+@app.route('/')
+def home():
+    # Pasa el nombre de la biblioteca y el catálogo de libros a la plantilla
+    return render_template('index.html', titulo_pagina="Mi Biblioteca Virtual", libros=LIBROS)
 
-@app.get("/")
-def inicio():
-    return render_template("index.html", libros=libros)
+@app.route('/acerca')
+def acerca():
+    return "<h1>Acerca de TecMi Biblioteca</h1><p>Sistema de gestión de libros del proyecto.</p>"
 
-
-@app.post("/agregar")
-def agregar():
-    titulo = request.form.get("titulo", "").strip()
-    autor = request.form.get("autor", "").strip()
-
-    if titulo and autor:
-        nuevo_id = max((libro["id"] for libro in libros), default=0) + 1
-        libros.append({
-            "id": nuevo_id,
-            "titulo": titulo,
-            "autor": autor,
-            "prestado": False,
-        })
-
-    return redirect(url_for("inicio"))
-
-
-@app.post("/cambiar_estado/<int:libro_id>")
-def cambiar_estado(libro_id):
-    for libro in libros:
-        if libro["id"] == libro_id:
-            libro["prestado"] = not libro["prestado"]
-            break
-
-    return redirect(url_for("inicio"))
-
-
-if __name__ == "__main__":
+if __name__ == '__main__':
     app.run(debug=True)
