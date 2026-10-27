@@ -52,3 +52,6 @@ Abre http://127.0.0.1:5000 en el navegador. Para detener el servidor, vuelve a l
 ## Limitación de esta versión
 
 Los libros se almacenan en una lista de Python en memoria. No hay base de datos y los cambios desaparecen al detener la aplicación. La aplicación Flask no puede ejecutarse directamente en GitHub Pages, que sirve contenido estático.
+
+##;)
+
