@@ -1,2 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca "Sabiduría"</title>
+    <!-- Incluyendo Tailwind CSS para un diseño rápido y moderno -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
 
+    <!-- Encabezado / Barra de Navegación -->
+    <header class="bg-blue-900 text-white shadow-md">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold">📚 Biblioteca Tecmi</h1>
+            <nav class="space-x-6 hidden md:block">
+                <a href="#inicio" class="hover:text-blue-300 transition">Inicio</a>
+                <a href="#catalogo" class="hover:text-blue-300 transition">Catálogo</a>
+                <a href="#servicios" class="hover:text-blue-300 transition">Servicios</a>
+                <a href="#contacto" class="hover:text-blue-300 transition">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Sección de Inicio / Bienvenida -->
+    <section id="inicio" class="bg-blue-800 text-white py-20 text-center">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-extrabold mb-4">Encuentra tu próxima gran lectura</h2>
+            <p class="text-lg text-blue-200 mb-8 max-w-2xl mx-auto">Explora miles de libros, disfruta de espacios silenciosos para estudiar y forma parte de nuestra comunidad lectora.</p>
+            <a href="#catalogo" class="bg-yellow-500 hover:bg-yellow-400 text-gray-900 font-bold px-6 py-3 rounded-lg shadow transition">Ver Catálogo</a>
+        </div>
+    </section>
+
+    <!-- Sección del Catálogo (Ejemplos de Libros) -->
+    <section id="catalogo" class="container mx-auto px-6 py-16">
+        <h3 class="text-3xl font-bold text-center mb-12 text-gray-800">Libros Destacados</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+            <!-- Libro 1 -->
+            <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+                <div class="h-48 bg-blue-100 rounded-md mb-4 flex items-center justify-center text-blue-500 font-semibold">Portada del Libro</div>
+                <h4 class="text-xl font-bold mb-2">Cien años de soledad</h4>
+                <p class="text-gray-600 text-sm mb-4">Autor: Gabriel García Márquez</p>
+                <span class="inline-block bg-green-100 text-green-800 text-xs px-2.5 py-1 rounded font-semibold">Disponible</span>
+            </div>
+            <!-- Libro 2 -->
+            <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+                <div class="h-48 bg-blue-100 rounded-md mb-4 flex items-center justify-center text-blue-500 font-semibold">Portada del Libro</div>
+                <h4 class="text-xl font-bold mb-2">Don Quijote de la Mancha</h4>
+                <p class="text-gray-600 text-sm mb-4">Autor: Miguel de Cervantes</p>
+                <span class="inline-block bg-green-100 text-green-800 text-xs px-2.5 py-1 rounded font-semibold">Disponible</span>
+            </div>
+            <!-- Libro 3 -->
+            <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+                <div class="h-48 bg-blue-100 rounded-md mb-4 flex items-center justify-center text-blue-500 font-semibold">Portada del Libro</div>
+                <h4 class="text-xl font-bold mb-2">1984</h4>
+                <p class="text-gray-600 text-sm mb-4">Autor: George Orwell</p>
+                <span class="inline-block bg-red-100 text-red-800 text-xs px-2.5 py-1 rounded font-semibold">Prestado</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Servicios -->
+    <section id="servicios" class="bg-gray-100 py-16">
+        <div class="container mx-auto px-6 text-center">
+            <h3 class="text-3xl font-bold mb-12 text-gray-800">Nuestros Servicios</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <div class="text-4xl mb-4">📖</div>
+                    <h4 class="font-bold text-xl mb-2">Préstamo a domicilio</h4>
+                    <p class="text-gray-600">Lleva tus libros favoritos a casa por hasta 15 días renovables.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <div class="text-4xl mb-4">💻</div>
+                    <h4 class="font-bold text-xl mb-2">Salas de cómputo</h4>
+                    <p class="text-gray-600">Acceso gratuito a internet e impresiones para estudiantes e investigadores.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <div class="text-4xl mb-4">🤫</div>
+                    <h4 class="font-bold text-xl mb-2">Salas de estudio</h4>
+                    <p class="text-gray-600">Espacios silenciosos individuales y grupales para potenciar tu aprendizaje.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer id="contacto" class="bg-gray-900 text-white py-8 text-center">
+        <div class="container mx-auto px-6">
+            <p class="mb-2">📍 Dirección: Av. de las Letras #123, Ciudad de los Libros</p>
+            <p class="mb-4">📞 Teléfono: (555) 123-4567 | ✉️ Correo: contacto@bibliotecasabiduria.org</p>
+            <p class="text-gray-500 text-sm">&copy; 2026 Biblioteca Sabiduría. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
 
