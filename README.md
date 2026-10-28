@@ -1,3 +1,4 @@
+
 # Biblioteca colaborativa
 
 Aplicación web educativa desarrollada con Python y Flask para practicar el flujo de trabajo colaborativo de Git y GitHub.
@@ -57,3 +58,6 @@ Los libros se almacenan en una lista de Python en memoria. No hay base de datos 
 Esto es una oración de prueba, saludos a JA y AA
 ## MODIFICACION Fer y Adrian (CHEZ)
 Faltan 3 dias pa´ pistear
+
+##Modificacion realizada por Diego Mondragon
+Ya va a ser Halloween

@@ -8,7 +8,9 @@ app = Flask(__name__)
 LIBROS = [
     {"titulo": "Cien años de soledad", "autor": "Gabriel García Márquez", "disponible": True},
     {"titulo": "Don Quijote de la Mancha", "autor": "Miguel de Cervantes", "disponible": False},
-    {"titulo": "El principito", "autor": "Antoine de Saint-Exupéry", "disponible": True}
+   # Modificación adicional por Diego Mondragón
+    {{"titulo": "Clean Code", "autor": "Robert C. Martin", "disponible": True},
+ {"titulo": "El principito", "autor": "Antoine de Saint-Exupéry", "disponible": True}
 ]
 
 @app.route('/')
